@@ -36,6 +36,9 @@ Vagrant.configure("2") do |config|
     apt update
     apt install -y rspamd
 
+    # apache2 also needed for service reload
+    apt install -y apache2
+
     python2 -m pip install cryptdomainmgr
     python3 -m pip install cryptdomainmgr
   SHELL
